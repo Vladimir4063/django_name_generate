@@ -1,0 +1,32 @@
+{% extends 'generator/layout.html' %}
+
+{%block content%}
+
+
+<div class="col-md-4 offset-md-4">
+    
+    <form action="{% url 'name' %}" class="card card-body">
+
+        <h4 class="text-center">¡Busquemos un nombre!</h4>
+        <label for="length">Select the length of your Name</label>
+        <select name="length" id="length" class="form-control mt-2">
+            <option value="1">Short</option>
+            <option value="2">Medium</option>
+            <option value="3">Long</option>
+        </select>
+        
+        <div class="form-check form-switch my-2">
+            <label for="male" class="form-check-label">Male</label>
+            <input type="checkbox" name="male" class="form-check-input" id="male">
+        </div>
+        
+        <div class="form-check form-switch">
+            <label for="female" class="form-check-label">Female</label>
+            <input type="checkbox" name="female" class="form-check-input" id="female">
+        </div>
+
+        <button class="btn btn-primary bg-gradient my-2">Generator Name</button>
+    </form>
+</div>
+
+{%endblock%}
